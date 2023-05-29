@@ -7,12 +7,18 @@
     width: 100%;
   }
 
-  h1 {
+  .App h1 {
     font-size: 2rem;
   }
 
+  .App button {
+    border: none;
+    width: 1rem;
+    height: 1rem;
+  }
+
 @media only screen and (max-width: 600px) {
-  h1 {
+  .App h1 {
     font-size: 1.5rem;
   }
 }
