@@ -1,3 +1,6 @@
 .Nav {
-    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    background-color: #63545A;
 }
