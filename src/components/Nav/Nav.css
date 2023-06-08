@@ -2,5 +2,15 @@
     width: 100%;
     display: flex;
     justify-content: space-around;
-    background-color: #63545A;
+    background-color: #6B6054;
+    padding-top: 2px;
+}
+
+.Nav img {
+    width: 50px;
+}
+
+.Nav .routes {
+    display: flex;
+    align-items: center;
 }

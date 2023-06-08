@@ -1,12 +1,11 @@
 import Hero from '../../components/Hero/Hero'
-import Nav from '../../components/Nav/Nav'
 import './Home.css'
 
 function Home() {
   return (
     <div className='Home'>
-        <Nav />
-        <Hero />
+      <Hero />
+      <h1>This is the first prototype of my portfolio website</h1>
     </div>
   )
 }

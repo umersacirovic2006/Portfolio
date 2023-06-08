@@ -1,12 +1,13 @@
 import { Button } from "@mui/material";
 import "./Nav.css";
 import { NavLink } from "react-router-dom";
+import logo from "/images/logo.png";
 
 function Nav() {
   return (
     <div className="Nav">
       <div className="img">
-        <img />
+        <img src={logo} alt="Logo" />
       </div>
       <div className="routes">
         <Button>
