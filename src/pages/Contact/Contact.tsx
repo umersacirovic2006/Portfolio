@@ -1,11 +1,18 @@
-import './Contact.css'
+import "./Contact.css";
+import bg from "/images/contact.svg";
+import { motion } from "framer-motion";
 
 function Contact() {
   return (
-    <div className='Contact'>
-      Contact
-    </div>
-  )
+    <motion.div
+      className="Contact"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+    >
+      <img src={bg} alt="bg" className="Wave" />
+    </motion.div>
+  );
 }
 
-export default Contact
+export default Contact;

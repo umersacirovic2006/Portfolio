@@ -10,6 +10,14 @@ function Nav() {
         <img src={logo} alt="Logo" />
       </div>
       <div className="routes">
+      <Button>
+          <NavLink
+            to="/"
+            style={{ color: "white", textDecoration: "none" }}
+          >
+            Home
+          </NavLink>
+        </Button>
         <Button>
           <NavLink
             to="/about"

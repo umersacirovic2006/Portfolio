@@ -1,0 +1,9 @@
+.Home {
+  .home-wrapper {
+    border-top-right-radius: 200px;
+    border-bottom-left-radius: 200px;
+    padding: 30%;
+    margin: 0% 5%;
+    background-color: wheat;
+  }
+}
