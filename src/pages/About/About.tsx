@@ -1,4 +1,4 @@
-import "./About.css";
+import "./About.scss";
 import bg from "/images/about.svg";
 import { motion } from "framer-motion";
 

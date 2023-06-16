@@ -1,5 +1,5 @@
 import { Button } from "@mui/material";
-import "./Nav.css";
+import "./Nav.scss";
 import { NavLink } from "react-router-dom";
 import logo from "/images/logo.png";
 

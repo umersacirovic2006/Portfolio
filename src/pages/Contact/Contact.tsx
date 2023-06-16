@@ -1,4 +1,4 @@
-import "./Contact.css";
+import "./Contact.scss";
 import bg from "/images/contact.svg";
 import { motion } from "framer-motion";
 
