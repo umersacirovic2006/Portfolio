@@ -8,7 +8,7 @@ import Nav from "./components/Nav/Nav";
 import { AnimatePresence } from "framer-motion";
 import Footer from "./components/Footer/Footer";
 
-function App() {
+const App = () => {
   const location = useLocation();
 
   return (
