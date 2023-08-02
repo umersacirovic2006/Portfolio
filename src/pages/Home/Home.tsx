@@ -1,23 +1,33 @@
 import "./Home.scss";
 import bg from "/images/bg.svg";
+import bg2 from "/images/bg2.svg";
 import { motion } from "framer-motion";
 import { useViewportSize } from "@mantine/hooks";
+import { Link } from "react-router-dom";
 
 const HomeWrapper = () => {
   return (
     <div className="home-wrapper">
-        <h5>I am</h5>
-        <h1>
-          Umer
-          <br /> <span>Sacirovic</span>
-        </h1>
-        <p>
-          I'm Umer Sacirovic, a skilled and passionate web developer
-          specializing in using HTML, CSS, JavaScript, Typescript, and React.
-        </p>
-      </div>
-  )
-}
+      <h5>I am</h5>
+      <h1>
+        Umer
+        <br /> <span>Sacirovic</span>
+      </h1>
+      <p>
+        a skilled and passionate web developer specializing in using HTML, CSS,
+        JavaScript, Typescript, and React.
+      </p>
+      <br />
+      <p style={{ textAlign: "end" }}>
+        To learn more{" "}
+        <Link className="aboutBtn" to="/about">
+          About
+        </Link>{" "}
+        me
+      </p>
+    </div>
+  );
+};
 
 const HomeDesktop = () => {
   return (

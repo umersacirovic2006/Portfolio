@@ -1,10 +1,12 @@
+@import '../../index.scss';
+
 .Home-Desktop {
   .home-wrapper {
     border-top-right-radius: 200px;
     border-bottom-left-radius: 200px;
     padding: 10%;
     margin: 0% 5%;
-    background-color: wheat;
+    background-color: $text;
     border-top-left-radius: 700px;
     border-top-right-radius: 800px;
     border-bottom-right-radius: 900px;
@@ -17,22 +19,37 @@
     h1 {
       font-size: 76px;
       letter-spacing: -3px;
+      line-height: 5rem;
 
       span {
         color: white;
+        font-family: Arial, Helvetica, sans-serif;
         -webkit-text-fill-color: transparent;
         -webkit-text-stroke-width: 1px;
         -webkit-text-stroke-color: black;
+      }
+    }
+
+    p {
+      font-size: 17px;
+
+      .aboutBtn {
+        color: black;
+        text-decoration: none;
+        border: 1px solid black;
+        padding: 0.25rem;
       }
     }
   }
 }
 
 .Home-Mobile {
+  height: 78vh;
+
   .home-wrapper {
     padding: 10%;
-    margin: 0% 5%;
-    background-color: wheat;
+    margin: 30% 5%;
+    background-color: $text;
     border-top-left-radius: 70px;
     border-top-right-radius: 80px;
     border-bottom-right-radius: 90px;
@@ -47,10 +64,21 @@
       letter-spacing: -3px;
 
       span {
-        color: white;
+        color: $white;
         -webkit-text-fill-color: transparent;
         -webkit-text-stroke-width: 1px;
         -webkit-text-stroke-color: black;
+      }
+    }
+
+    p {
+      font-size: 17px;
+
+      .aboutBtn {
+        color: black;
+        text-decoration: none;
+        border: 1px solid black;
+        padding: 0.25rem;
       }
     }
   }

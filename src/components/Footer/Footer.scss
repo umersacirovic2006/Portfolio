@@ -1,12 +1,14 @@
-.Footer {
-    background-color: #6B6054;
-    padding: 3%;
-    margin-top: 5%;
-    display: flex;
-    justify-content: space-between;
-    align-items: end;
-}
+@import '../../index.scss';
 
-.Footer small {
-    color: white;
+.Footer {
+  background-color: $primary;
+  padding: 3%;
+  margin-top: 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+
+  small {
+    color: $text;
+  }
 }

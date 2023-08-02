@@ -10,37 +10,17 @@ function Nav() {
         <img src={logo} alt="Logo" />
       </div>
       <div className="routes">
-      <Button>
-          <NavLink
-            to="/"
-            style={{ color: "white", textDecoration: "none" }}
-          >
-            Home
-          </NavLink>
+        <Button>
+          <NavLink to="/">Home</NavLink>
         </Button>
         <Button>
-          <NavLink
-            to="/about"
-            style={{ color: "white", textDecoration: "none" }}
-          >
-            About
-          </NavLink>
+          <NavLink to="/about">About</NavLink>
         </Button>
         <Button>
-          <NavLink
-            to="/projects"
-            style={{ color: "white", textDecoration: "none" }}
-          >
-            Projects
-          </NavLink>
+          <NavLink to="/projects">Projects</NavLink>
         </Button>
         <Button>
-          <NavLink
-            to="/contact"
-            style={{ color: "white", textDecoration: "none" }}
-          >
-            Contact
-          </NavLink>
+          <NavLink to="/contact">Contact</NavLink>
         </Button>
       </div>
     </div>

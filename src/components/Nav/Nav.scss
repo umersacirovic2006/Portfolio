@@ -1,16 +1,23 @@
+@import '../../index.scss';
+
 .Nav {
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    background-color: #6B6054;
-    padding-top: 2px;
-}
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  background-color: $primary;
+  padding-top: 2px;
 
-.Nav img {
+  img {
     width: 50px;
-}
+  }
 
-.Nav .routes {
+  .routes {
     display: flex;
     align-items: center;
+  }
+
+  a {
+    color: $text;
+    text-decoration: none;
+  }
 }
