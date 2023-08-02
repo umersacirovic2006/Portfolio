@@ -1,6 +1,5 @@
 import "./Home.scss";
 import bg from "/images/bg.svg";
-import bg2 from "/images/bg2.svg";
 import { motion } from "framer-motion";
 import { useViewportSize } from "@mantine/hooks";
 import { Link } from "react-router-dom";
