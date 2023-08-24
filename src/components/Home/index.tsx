@@ -1,4 +1,4 @@
-import "./Home.scss";
+import "./index.scss";
 import bg from "/images/bg.svg";
 import { motion } from "framer-motion";
 import { useViewportSize } from "@mantine/hooks";

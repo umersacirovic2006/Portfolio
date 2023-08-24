@@ -1,12 +1,12 @@
 import "./App.scss";
 import { Routes, Route, useLocation } from "react-router-dom";
-import Home from "./pages/Home/Home";
-import About from "./pages/About/About";
-import Projects from "./pages/Projects/Projects";
-import Contact from "./pages/Contact/Contact";
-import Nav from "./components/Nav/Nav";
+import Home from "./components/Home/index";
+import About from "./components/About";
+import Projects from "./components/Projects";
+import Contact from "./components/Contact/Contact";
+import Nav from "./components/Nav/index";
 import { AnimatePresence } from "framer-motion";
-import Footer from "./components/Footer/Footer";
+import Footer from "./components/Footer/index";
 
 const App = () => {
   const location = useLocation();

@@ -1,0 +1,107 @@
+@import "../../index.scss";
+
+.About-Desktop {
+  .about-wrapper {
+    border-top-right-radius: 200px;
+    border-bottom-left-radius: 200px;
+    padding: 10%;
+    margin: 0% 5%;
+    background-color: $text;
+    border-top-left-radius: 700px;
+    border-top-right-radius: 800px;
+    border-bottom-right-radius: 900px;
+    border-bottom-left-radius: 1000px;
+    animation-name: switchRadiusDesktop;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+}
+
+.About-Mobile {
+  .about-wrapper {
+    padding: 10%;
+    margin: 30% 5%;
+    background-color: $text;
+    border-top-left-radius: 70px;
+    border-top-right-radius: 80px;
+    border-bottom-right-radius: 90px;
+    border-bottom-left-radius: 100px;
+    animation-name: switchRadiusMobile;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+}
+
+@keyframes switchRadiusMobile {
+  0% {
+    border-top-left-radius: 70px;
+    border-top-right-radius: 80px;
+    border-bottom-right-radius: 90px;
+    border-bottom-left-radius: 100px;
+  }
+  25% {
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 70px;
+    border-bottom-left-radius: 90px;
+  }
+  80% {
+    border-top-left-radius: 100px;
+    border-top-right-radius: 70px;
+    border-bottom-right-radius: 70px;
+    border-bottom-left-radius: 80px;
+  }
+  75% {
+    border-top-left-radius: 90px;
+    border-top-right-radius: 70px;
+    border-bottom-right-radius: 100px;
+    border-bottom-left-radius: 80px;
+  }
+  100% {
+    border-top-left-radius: 70px;
+    border-top-right-radius: 80px;
+    border-bottom-right-radius: 90px;
+    border-bottom-left-radius: 100px;
+  }
+}
+
+@keyframes switchRadiusDesktop {
+  0% {
+    border-top-left-radius: 700px;
+    border-top-right-radius: 800px;
+    border-bottom-right-radius: 900px;
+    border-bottom-left-radius: 1000px;
+  }
+  20% {
+    border-top-left-radius: 1000px;
+    border-top-right-radius: 1000px;
+    border-bottom-right-radius: 700px;
+    border-bottom-left-radius: 900px;
+  }
+  40% {
+    border-top-left-radius: 1000px;
+    border-top-right-radius: 700px;
+    border-bottom-right-radius: 700px;
+    border-bottom-left-radius: 800px;
+  }
+  60% {
+    border-top-left-radius: 900px;
+    border-top-right-radius: 700px;
+    border-bottom-right-radius: 1000px;
+    border-bottom-left-radius: 800px;
+  }
+  80% {
+    border-top-left-radius: 700px;
+    border-top-right-radius: 800px;
+    border-bottom-right-radius: 900px;
+    border-bottom-left-radius: 1000px;
+  }
+  100% {
+    border-top-left-radius: 700px;
+    border-top-right-radius: 800px;
+    border-bottom-right-radius: 900px;
+    border-bottom-left-radius: 1000px;
+  }
+}

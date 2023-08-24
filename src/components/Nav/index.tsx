@@ -1,5 +1,5 @@
 import { Button } from "@mui/material";
-import "./Nav.scss";
+import "./index.scss";
 import { NavLink } from "react-router-dom";
 import logo from "/images/logo.png";
 
@@ -7,12 +7,13 @@ function Nav() {
   return (
     <div className="Nav">
       <div className="img">
-        <img src={logo} alt="Logo" />
+        <Button>
+          <NavLink to="/">
+            <img src={logo} alt="Logo" />
+          </NavLink>
+        </Button>
       </div>
       <div className="routes">
-        <Button>
-          <NavLink to="/">Home</NavLink>
-        </Button>
         <Button>
           <NavLink to="/about">About</NavLink>
         </Button>
