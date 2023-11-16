@@ -3,7 +3,11 @@ import { createContext, useContext, useEffect, useState } from "react";
 
 const AppContext = createContext({} as any);
 
-export const AppProvider = ({ children }) => {
+interface UseAppProps {
+  children: React.ReactNode; // Adjust the type based on what you expect
+}
+
+export const AppProvider = ({ children }: UseAppProps) => {
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
 
