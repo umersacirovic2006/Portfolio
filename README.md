@@ -35,10 +35,10 @@ I specialize in:
 ### Installation
 
 ```bash
-git clone [your repository URL]
-cd [your project folder]
-npm install
-npm start
+git clone https://github.com/umersacirovic2006/Portfolio
+cd Portfolio
+npm i
+npm run dev
 ```
 
 ## Usage
