@@ -1,7 +1,7 @@
 import './index.scss'
 import logo from '/images/logo.png'
 
-function Footer() {
+const Footer = () => {
   return (
     <div className='Footer'>
         <img src={logo} alt='logo' style={{width: '100px'}} />

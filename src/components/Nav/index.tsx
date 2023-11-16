@@ -3,7 +3,7 @@ import "./index.scss";
 import { NavLink } from "react-router-dom";
 import logo from "/images/logo.png";
 
-function Nav() {
+const Nav = () => {
   return (
     <div className="Nav">
       <div className="img">

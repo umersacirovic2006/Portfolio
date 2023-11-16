@@ -1,17 +1,153 @@
-@import '../../index.scss';
+@import "../../index.scss";
 
-.Projects-Desktop {
-  .projects-wrapper {
-    border-top-right-radius: 200px;
-    border-bottom-left-radius: 200px;
-    padding: 10% 0;
-    margin: 0% 40%;
-    background-color: $text;
-    transition: 0.6s ease-in-out;
+.ProjectsDesktop {
+    margin-bottom: 20vh;
 
-    &:hover {
-      border-radius: 20px;
-      transform: scale(1.6);
+    .projects-container {
+        display: flex;
+        justify-content: space-around;
+
+        .projects-wrapper {
+            position: relative;
+            border-top-right-radius: 150px;
+            border-bottom-left-radius: 150px;
+            padding: 6% 2%;
+            background-color: $text;
+            transition: 0.6s ease-in-out;
+            text-decoration: none;
+            width: 20vw;
+            overflow: hidden;
+            cursor: pointer;
+            position: relative;
+
+            p {
+                color: $black;
+                font-weight: bold;
+                font-size: 12px;
+            }
+
+            .hover-text {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                color: $black;
+                font-size: 26px;
+                font-weight: bold;
+                opacity: 1;
+                transition: opacity 0.6s ease-in-out;
+            }
+
+            &:hover {
+                border-radius: 20px;
+                transform: scale(1.6);
+                padding: 2%;
+
+                .hover-text {
+                    opacity: 0;
+                }
+            }
+
+            .projects-image {
+                width: 100%;
+            }
+
+            .left,
+            .right {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                width: 50%;
+                background: $text;
+                transition: 0.6s ease-in-out;
+            }
+
+            .left {
+                left: 0;
+            }
+
+            .right {
+                right: 0;
+            }
+
+            &:hover {
+                .left,
+                .right {
+                    width: 0;
+                }
+            }
+        }
+    }
+}
+
+.ProjectsMobile {
+    width: 100vw;
+
+    .projects-container {
+        width: 80%;
+        margin: 37% 10%;
+        padding: 6% 10%;
+        background-color: $text;
+        border-top-left-radius: 110px;
+        border-top-right-radius: 120px;
+        border-bottom-right-radius: 130px;
+        border-bottom-left-radius: 100px;
+        animation-name: switchRadiusMobile;
+        animation-duration: 10s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+
+        .projects-wrapper {
+            text-decoration: none;
+
+            p {
+                color: $black;
+                font-weight: bold;
+                font-size: 12px;
+            }
+
+            .left,
+            .right,
+            .hover-text {
+                display: none;
+            }
+
+            .projects-image {
+                width: 100%;
+            }
+        }
+    }
+}
+
+@keyframes switchRadius {
+    0% {
+      border-top-left-radius: 110px;
+      border-top-right-radius: 120px;
+      border-bottom-right-radius: 130px;
+      border-bottom-left-radius: 100px;
+    }
+    25% {
+      border-top-left-radius: 100px;
+      border-top-right-radius: 100px;
+      border-bottom-right-radius: 110px;
+      border-bottom-left-radius: 130px;
+    }
+    120% {
+      border-top-left-radius: 100px;
+      border-top-right-radius: 110px;
+      border-bottom-right-radius: 110px;
+      border-bottom-left-radius: 120px;
+    }
+    75% {
+      border-top-left-radius: 130px;
+      border-top-right-radius: 110px;
+      border-bottom-right-radius: 100px;
+      border-bottom-left-radius: 120px;
+    }
+    100% {
+      border-top-left-radius: 110px;
+      border-top-right-radius: 120px;
+      border-bottom-right-radius: 130px;
+      border-bottom-left-radius: 100px;
     }
   }
-}

@@ -1,6 +1,6 @@
 @import '../../index.scss';
 
-.Home-Desktop {
+.HomeDesktop {
   .home-wrapper {
     border-top-right-radius: 200px;
     border-bottom-left-radius: 200px;
@@ -43,7 +43,7 @@
   }
 }
 
-.Home-Mobile {
+.HomeMobile {
   height: 78vh;
 
   .home-wrapper {
@@ -65,6 +65,7 @@
 
       span {
         color: $white;
+        font-family: Arial, Helvetica, sans-serif;
         -webkit-text-fill-color: transparent;
         -webkit-text-stroke-width: 1px;
         -webkit-text-stroke-color: black;

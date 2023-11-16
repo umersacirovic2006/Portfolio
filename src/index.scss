@@ -1,28 +1,29 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
-$white: #F6E7CB;
+$white: #f6e7cb;
 $background: #757769;
-$primary: #6B6054;
-$text: #F5DEB3;
+$primary: #6b6054;
+$text: #f5deb3;
+$black: #232b2b;
 
 * {
-  font-family: 'Montserrat', sans-serif;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 ::-webkit-scrollbar {
-  width: 0.3vw;
-  background: rgb(231, 231, 231);
+    width: 0.3vw;
+    background: rgb(231, 231, 231);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgb(178, 178, 178);
-  border-radius: 0.5vw;
-  padding: 0% 2%;
+    background: rgb(178, 178, 178);
+    border-radius: 0.5vw;
+    padding: 0% 2%;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #555;
+    background: #555;
 }

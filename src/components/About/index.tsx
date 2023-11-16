@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 const AboutWrapper = () => {
   return (
   <div className="about-wrapper">
-    <h2>Hello this is a test</h2>
+    <h1>Currently all attention devoted to my start-up <a href="https://mojnovipazar.info">MojNP</a></h1>
   </div>
   )
 };
