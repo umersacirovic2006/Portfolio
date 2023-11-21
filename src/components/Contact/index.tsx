@@ -1,11 +1,14 @@
+import { useApp } from "../../context/useApp";
 import "./index.scss";
 import bg from "/images/contact.svg";
 import { motion } from "framer-motion";
 
 const Contact = () => {
+    const { isMobile } = useApp();
+
     return (
         <motion.div
-            className="Contact"
+            className={`Contact${isMobile ? "Mobile" : "Desktop"}`}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -39,6 +42,6 @@ const Contact = () => {
             </div>
         </motion.div>
     );
-}
+};
 
 export default Contact;

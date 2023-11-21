@@ -1,107 +1,165 @@
 @import "../../index.scss";
 
-.About-Desktop {
-  .about-wrapper {
-    border-top-right-radius: 200px;
-    border-bottom-left-radius: 200px;
-    padding: 10%;
-    margin: 0% 5%;
-    background-color: $text;
-    border-top-left-radius: 700px;
-    border-top-right-radius: 800px;
-    border-bottom-right-radius: 900px;
-    border-bottom-left-radius: 1000px;
-    animation-name: switchRadiusDesktop;
-    animation-duration: 10s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-  }
+.AboutDesktop {
+    .Wave {
+        width: 99vw;
+    }
+
+    .about-wrapper {
+        border-top-right-radius: 200px;
+        border-bottom-left-radius: 200px;
+        padding: 5% 15%;
+        margin: 10vh 5%;
+        background-color: $text;
+        border-top-left-radius: 350px;
+        border-top-right-radius: 400px;
+        border-bottom-right-radius: 450px;
+        border-bottom-left-radius: 500px;
+        animation-name: switchRadiusDesktop;
+        animation-duration: 10s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+
+        h2 {
+            margin-bottom: 5vh;
+            text-align: center;
+            font-size: xx-large;
+        }
+
+        h3 {
+            margin: 1.5rem;
+        }
+
+        p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+            overflow: hidden;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            overflow: hidden;
+
+            li {
+                color: #777;
+                padding-left: 20px;
+                position: relative;
+
+                &::before {
+                    content: "•";
+                    position: absolute;
+                    left: 0;
+                    color: #555;
+                }
+            }
+        }
+
+        .dowload-btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 100%;
+        }
+    }
 }
 
-.About-Mobile {
-  .about-wrapper {
-    padding: 10%;
-    margin: 30% 5%;
-    background-color: $text;
-    border-top-left-radius: 70px;
-    border-top-right-radius: 80px;
-    border-bottom-right-radius: 90px;
-    border-bottom-left-radius: 100px;
-    animation-name: switchRadiusMobile;
-    animation-duration: 10s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-  }
-}
+.AboutMobile {
+    .Wave {
+        width: 99vw;
+    }
 
-@keyframes switchRadiusMobile {
-  0% {
-    border-top-left-radius: 70px;
-    border-top-right-radius: 80px;
-    border-bottom-right-radius: 90px;
-    border-bottom-left-radius: 100px;
-  }
-  25% {
-    border-top-left-radius: 100px;
-    border-top-right-radius: 100px;
-    border-bottom-right-radius: 70px;
-    border-bottom-left-radius: 90px;
-  }
-  80% {
-    border-top-left-radius: 100px;
-    border-top-right-radius: 70px;
-    border-bottom-right-radius: 70px;
-    border-bottom-left-radius: 80px;
-  }
-  75% {
-    border-top-left-radius: 90px;
-    border-top-right-radius: 70px;
-    border-bottom-right-radius: 100px;
-    border-bottom-left-radius: 80px;
-  }
-  100% {
-    border-top-left-radius: 70px;
-    border-top-right-radius: 80px;
-    border-bottom-right-radius: 90px;
-    border-bottom-left-radius: 100px;
-  }
+    .about-wrapper {
+        div {
+            padding: 11% 2%;
+            margin: 15% 1%;
+            background-color: $text;
+            border-top-left-radius: 70px;
+            border-top-right-radius: 80px;
+            border-bottom-right-radius: 90px;
+            border-bottom-left-radius: 100px;
+            animation-name: switchRadiusMobile;
+            animation-duration: 10s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+
+            svg {
+                margin-right: 1rem;
+                min-width: 2rem;
+            }
+
+            h2 {
+                font-size: 24px;
+                margin-bottom: 20px;
+            }
+
+            h3 {
+                font-size: 1.25rem;
+            }
+
+            p,
+            ul {
+                overflow: hidden;
+                padding: 0 1.5rem;
+            }
+
+            ul {
+                margin-bottom: 15px;
+
+                li {
+                    list-style-type: none;
+                    margin-bottom: 10px;
+                    padding-left: 20px;
+                    position: relative;
+
+                    &:before {
+                        content: "\2022";
+                        position: absolute;
+                        left: 0;
+                        color: #555;
+                    }
+                }
+            }
+        }
+    }
 }
 
 @keyframes switchRadiusDesktop {
-  0% {
-    border-top-left-radius: 700px;
-    border-top-right-radius: 800px;
-    border-bottom-right-radius: 900px;
-    border-bottom-left-radius: 1000px;
-  }
-  20% {
-    border-top-left-radius: 1000px;
-    border-top-right-radius: 1000px;
-    border-bottom-right-radius: 700px;
-    border-bottom-left-radius: 900px;
-  }
-  40% {
-    border-top-left-radius: 1000px;
-    border-top-right-radius: 700px;
-    border-bottom-right-radius: 700px;
-    border-bottom-left-radius: 800px;
-  }
-  60% {
-    border-top-left-radius: 900px;
-    border-top-right-radius: 700px;
-    border-bottom-right-radius: 1000px;
-    border-bottom-left-radius: 800px;
-  }
-  80% {
-    border-top-left-radius: 700px;
-    border-top-right-radius: 800px;
-    border-bottom-right-radius: 900px;
-    border-bottom-left-radius: 1000px;
-  }
-  100% {
-    border-top-left-radius: 700px;
-    border-top-right-radius: 800px;
-    border-bottom-right-radius: 900px;
-    border-bottom-left-radius: 1000px;
-  }
+    0% {
+        border-top-left-radius: 350px;
+        border-top-right-radius: 400px;
+        border-bottom-right-radius: 450px;
+        border-bottom-left-radius: 500px;
+    }
+    20% {
+        border-top-left-radius: 500px;
+        border-top-right-radius: 500px;
+        border-bottom-right-radius: 300px;
+        border-bottom-left-radius: 400px;
+    }
+    40% {
+        border-top-left-radius: 500px;
+        border-top-right-radius: 300px;
+        border-bottom-right-radius: 300px;
+        border-bottom-left-radius: 350px;
+    }
+    60% {
+        border-top-left-radius: 400px;
+        border-top-right-radius: 300px;
+        border-bottom-right-radius: 450px;
+        border-bottom-left-radius: 350px;
+    }
+    80% {
+        border-top-left-radius: 350px;
+        border-top-right-radius: 400px;
+        border-bottom-right-radius: 400px;
+        border-bottom-left-radius: 450px;
+    }
+    100% {
+        border-top-left-radius: 350px;
+        border-top-right-radius: 400px;
+        border-bottom-right-radius: 450px;
+        border-bottom-left-radius: 500px;
+    }
 }

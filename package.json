@@ -10,12 +10,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@emotion/react": "^11.11.0",
+    "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
     "@mantine/core": "^6.0.15",
     "@mantine/hooks": "^6.0.15",
     "@mui/icons-material": "^5.11.16",
-    "@mui/material": "^5.13.3",
+    "@mui/material": "^5.14.18",
     "@types/react-autocomplete": "^1.8.6",
     "@types/react-router-dom": "^5.3.3",
     "framer-motion": "^10.12.16",
