@@ -1,6 +1,11 @@
 @import "../../index.scss";
 
 .ContactDesktop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+   
     &.dark {
         .contact {
             background-color: $black;
@@ -10,13 +15,12 @@
 
     .contact {
         width: 80vw;
-        margin: 0 10%;
         background-color: $white;
         border: 2px solid $black;
         display: flex;
         flex-direction: column;
         padding: 10% 20%;
-        margin: 10vh auto;
+        margin: 10vh 0;
         border-top-left-radius: 700px;
         border-top-right-radius: 800px;
         border-bottom-right-radius: 900px;
@@ -54,14 +58,26 @@
 }
 
 .ContactMobile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    &.dark {
+        .contact {
+            background-color: $black;
+            border: 2px solid $text;
+        }
+    }
+
     .contact {
         width: 80vw;
-        margin: 0 10%;
-        background-color: $text;
+        background-color: $white;
+        border: 2px solid $black;
+        background-color: $white;
         display: flex;
         flex-direction: column;
         padding: 10% 20%;
-        margin: 35% 10%;
         border-top-left-radius: 70px;
         border-top-right-radius: 80px;
         border-bottom-right-radius: 90px;
