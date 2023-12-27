@@ -1,165 +1,192 @@
 @import "../../index.scss";
 
 .AboutDesktop {
-    .Wave {
-        width: 99vw;
-    }
+    padding: 10% 15%;
+    margin: 10vh 5%;
+    border: 2px solid $black;
+    border-top-right-radius: 20rem;
+    border-bottom-left-radius: 20rem;
+    border-top-left-radius: 30rem;
+    border-top-right-radius: 40rem;
+    border-bottom-right-radius: 45rem;
+    border-bottom-left-radius: 50rem;
+    animation-name: switchRadiusS;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
 
-    .about-wrapper {
-        border-top-right-radius: 200px;
-        border-bottom-left-radius: 200px;
-        padding: 5% 15%;
-        margin: 10vh 5%;
-        background-color: $text;
-        border-top-left-radius: 350px;
-        border-top-right-radius: 400px;
-        border-bottom-right-radius: 450px;
-        border-bottom-left-radius: 500px;
-        animation-name: switchRadiusDesktop;
-        animation-duration: 10s;
-        animation-timing-function: linear;
-        animation-iteration-count: infinite;
+    &.dark {
+        border: 2px solid $text;
 
-        h2 {
-            margin-bottom: 5vh;
-            text-align: center;
-            font-size: xx-large;
-        }
-
-        h3 {
-            margin: 1.5rem;
-        }
-
-        p {
-            color: #666;
-            line-height: 1.6;
-            margin-bottom: 1.5rem;
-            overflow: hidden;
-        }
-
-        ul {
-            list-style-type: none;
-            padding: 0;
-            overflow: hidden;
-
-            li {
-                color: #777;
-                padding-left: 20px;
-                position: relative;
-
-                &::before {
-                    content: "•";
-                    position: absolute;
-                    left: 0;
-                    color: #555;
-                }
+        .download-btn {
+            button {
+                color: $text;
+                border-color: $text;
             }
         }
+    }
 
-        .dowload-btn {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: 100%;
+    h2 {
+        margin-bottom: 5vh;
+        text-align: center;
+        font-size: xx-large;
+    }
+
+    h3 {
+        margin: 1.5rem;
+    }
+
+    p {
+        line-height: 1.6;
+        margin-bottom: 1.5rem;
+        overflow: hidden;
+    }
+
+    ul {
+        list-style-type: none;
+        padding: 0;
+        overflow: hidden;
+
+        li {
+            padding-left: 20px;
+            position: relative;
+
+            &::before {
+                content: "•";
+                position: absolute;
+                left: 0;
+            }
+        }
+    }
+
+    .download-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        button {
+            color: $black;
+            border-color: $black;
         }
     }
 }
 
 .AboutMobile {
-    .Wave {
-        width: 99vw;
+    &.dark {
+        div {
+            background-color: $black;
+
+            button {
+                color: $text;
+                border-color: $text;
+            }
+        }
     }
 
-    .about-wrapper {
-        div {
-            padding: 11% 2%;
-            margin: 15% 1%;
-            background-color: $text;
-            border-top-left-radius: 70px;
-            border-top-right-radius: 80px;
-            border-bottom-right-radius: 90px;
-            border-bottom-left-radius: 100px;
-            animation-name: switchRadiusMobile;
-            animation-duration: 10s;
-            animation-timing-function: linear;
-            animation-iteration-count: infinite;
+    div {
+        padding: 11% 2%;
+        margin: 15% 1%;
+        background-color: $text;
+        border-top-left-radius: 70px;
+        border-top-right-radius: 80px;
+        border-bottom-right-radius: 90px;
+        border-bottom-left-radius: 100px;
+        animation-name: switchRadiusMobile;
+        animation-duration: 10s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
 
-            svg {
-                margin-right: 1rem;
-                min-width: 2rem;
-            }
+        svg {
+            margin-right: 1rem;
+            min-width: 2rem;
+        }
 
-            h2 {
-                font-size: 24px;
-                margin-bottom: 20px;
-            }
+        h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
 
-            h3 {
-                font-size: 1.25rem;
-            }
+        h3 {
+            font-size: 1.25rem;
+        }
 
-            p,
-            ul {
-                overflow: hidden;
-                padding: 0 1.5rem;
-            }
+        p,
+        ul {
+            overflow: hidden;
+            padding: 0 1.5rem;
+        }
 
-            ul {
-                margin-bottom: 15px;
+        ul {
+            margin-bottom: 15px;
 
-                li {
-                    list-style-type: none;
-                    margin-bottom: 10px;
-                    padding-left: 20px;
-                    position: relative;
+            li {
+                list-style-type: none;
+                margin-bottom: 10px;
+                padding-left: 20px;
+                position: relative;
 
-                    &:before {
-                        content: "\2022";
-                        position: absolute;
-                        left: 0;
-                        color: #555;
-                    }
+                &:before {
+                    content: "\2022";
+                    position: absolute;
+                    left: 0;
+                    color: $black;
                 }
             }
         }
     }
+
+    .download-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        button {
+            margin-top: 1rem;
+            color: $black;
+            border-color: $black;
+            display: flex;
+            align-items: center;
+        }
+    }
 }
 
-@keyframes switchRadiusDesktop {
+@keyframes switchRadiusS {
     0% {
-        border-top-left-radius: 350px;
-        border-top-right-radius: 400px;
-        border-bottom-right-radius: 450px;
-        border-bottom-left-radius: 500px;
+        border-top-left-radius: 30rem;
+        border-top-right-radius: 40rem;
+        border-bottom-right-radius: 45rem;
+        border-bottom-left-radius: 50rem;
     }
     20% {
-        border-top-left-radius: 500px;
-        border-top-right-radius: 500px;
-        border-bottom-right-radius: 300px;
-        border-bottom-left-radius: 400px;
+        border-top-left-radius: 50rem;
+        border-top-right-radius: 50rem;
+        border-bottom-right-radius: 35rem;
+        border-bottom-left-radius: 40rem;
     }
     40% {
-        border-top-left-radius: 500px;
-        border-top-right-radius: 300px;
-        border-bottom-right-radius: 300px;
-        border-bottom-left-radius: 350px;
+        border-top-left-radius: 50rem;
+        border-top-right-radius: 35rem;
+        border-bottom-right-radius: 35rem;
+        border-bottom-left-radius: 30rem;
     }
     60% {
-        border-top-left-radius: 400px;
-        border-top-right-radius: 300px;
-        border-bottom-right-radius: 450px;
-        border-bottom-left-radius: 350px;
+        border-top-left-radius: 40rem;
+        border-top-right-radius: 35rem;
+        border-bottom-right-radius: 45rem;
+        border-bottom-left-radius: 30rem;
     }
     80% {
-        border-top-left-radius: 350px;
-        border-top-right-radius: 400px;
-        border-bottom-right-radius: 400px;
-        border-bottom-left-radius: 450px;
+        border-top-left-radius: 30rem;
+        border-top-right-radius: 40rem;
+        border-bottom-right-radius: 40rem;
+        border-bottom-left-radius: 45rem;
     }
     100% {
-        border-top-left-radius: 350px;
-        border-top-right-radius: 400px;
-        border-bottom-right-radius: 450px;
-        border-bottom-left-radius: 500px;
+        border-top-left-radius: 30rem;
+        border-top-right-radius: 40rem;
+        border-bottom-right-radius: 45rem;
+        border-bottom-left-radius: 50rem;
     }
 }

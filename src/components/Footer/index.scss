@@ -1,14 +1,86 @@
-@import '../../index.scss';
+@import "../../index.scss";
 
 .Footer {
-  background-color: $primary;
-  padding: 3%;
-  margin-top: 5%;
-  display: flex;
-  justify-content: space-between;
-  align-items: end;
+    background-color: $primary;
+    width: auto;
+    padding: 2rem;
+    border: 2px solid black;
+    border-radius: 10rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
 
-  small {
-    color: $text;
-  }
+    @include colorTransition($white, $primary, $black, $text);
+
+    &.dark {
+        border: 2px solid $text;
+    }
+
+    svg {
+        width: 70px;
+    }
+
+    .copy {
+        #toggle {
+            display: none;
+        }
+    }
+}
+
+.FooterMobile {
+    background-color: $primary;
+    width: 100vw;
+    padding: 2rem;
+    margin: 2rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+
+    @include colorTransition($white, $primary, $black, $text);
+
+    &.dark {
+        .copy {
+            #toggle {
+                background-color: $text;
+            }
+        }
+    }
+
+    svg {
+        width: 70px;
+    }
+
+    .copy {
+        height: 6vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-end;
+
+        #toggle {
+            width: 50px;
+            display: flex;
+            padding: 5px;
+            background-color: $black;
+            display: block;
+            border-radius: 1000px;
+            cursor: pointer;
+            box-shadow: 0px 5px 20px -10px #000000;
+            transition: background-color 0.2s ease-in;
+
+            .toggle-inner {
+                width: 20px;
+                height: 15px;
+                background-color: $black;
+                border-radius: 1000px;
+                transition: margin-left 0.2s ease-in,
+                    background-color 0.2s ease-in;
+
+                &.toggle-active {
+                    margin-left: 20px;
+                    background-color: $white;
+                }
+            }
+        }
+    }
 }

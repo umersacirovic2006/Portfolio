@@ -1,19 +1,17 @@
 import { useApp } from "../../context/useApp";
 import "./index.scss";
-import bg from "/images/contact.svg";
 import { motion } from "framer-motion";
 
 const Contact = () => {
-    const { isMobile } = useApp();
+    const { isMobile, isDarkMode } = useApp();
 
     return (
         <motion.div
-            className={`Contact${isMobile ? "Mobile" : "Desktop"}`}
+            className={`Contact${isMobile ? "Mobile" : "Desktop"} ${isDarkMode ? '' : 'dark'}`}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
         >
-            <img src={bg} alt="bg" className="Wave" />
             <div className="contact">
                 <p>Contact me</p>
                 <form

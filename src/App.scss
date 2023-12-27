@@ -1,5 +1,17 @@
-@import './index.scss';
+@import "./index.scss";
 
 .App {
-  background-color: $background;
+    padding: 2rem 1rem;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @include colorTransition($white, $primary, $black, $text);
+}
+
+@media only screen and (max-width: 600px) {
+    .App {
+        padding: 2rem 0;
+    }
 }

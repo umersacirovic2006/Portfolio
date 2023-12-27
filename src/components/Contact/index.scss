@@ -1,14 +1,22 @@
 @import "../../index.scss";
 
 .ContactDesktop {
+    &.dark {
+        .contact {
+            background-color: $black;
+            border: 2px solid $text;
+        }
+    }
+
     .contact {
         width: 80vw;
         margin: 0 10%;
-        background-color: $text;
+        background-color: $white;
+        border: 2px solid $black;
         display: flex;
         flex-direction: column;
         padding: 10% 20%;
-        margin-bottom: 10%;
+        margin: 10vh auto;
         border-top-left-radius: 700px;
         border-top-right-radius: 800px;
         border-bottom-right-radius: 900px;

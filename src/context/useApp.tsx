@@ -4,18 +4,21 @@ import { createContext, useContext, useEffect, useState } from "react";
 const AppContext = createContext({} as any);
 
 interface UseAppProps {
-  children: React.ReactNode; // Adjust the type based on what you expect
+  children: React.ReactNode;
 }
 
 export const AppProvider = ({ children }: UseAppProps) => {
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+  const [toggled, setToggled] = useState(false);
 
   const values = {
     isDarkMode,
     setIsDarkMode,
     isMobile,
     setIsMobile,
+    toggled,
+    setToggled
   };
 
   const { width } = useViewportSize();
