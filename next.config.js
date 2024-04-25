@@ -4,7 +4,8 @@ module.exports = {
   images: {
     domains: ['i.ibb.co'],
   },
-  output: 'standalone',
+  output: 'export',
+  distDir: 'dist',
   reactStrictMode: false,
   swcMinify: true,
   typescript: {

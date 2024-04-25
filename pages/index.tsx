@@ -39,7 +39,7 @@ const Home = () => {
                 Projects
               </Link>{' '}
               and lines of code, turning zeroes and ones into immersive,
-              interactive experiences,{' '}
+              interactive experiences.{' '}
             </motion.p>
             <motion.p {...getTransitions(0.5)}>
               You can always{' '}
