@@ -12,7 +12,7 @@ import Layout, { PageWrapper } from '../components/Layout';
 import FooterLink from '../components/Footer';
 
 /* ---------------------------- Image Dependency ---------------------------- */
-import { Date, Github, Dribble, Product } from '../components/Icons';
+import { Github, Product } from '../components/Icons';
 
 const About = () => {
   return (

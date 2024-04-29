@@ -248,7 +248,6 @@ export const Header = styled.header`
       color: rgba(255, 255, 255, 0.5);
       border-color: transparent;
       &-icon{
-        /* filter: ${(props) => (props.theme ? 'invert(1)' : 'invert(0)')}; */
         filter: invert(var(--theme-amount));
       }
     }
@@ -443,7 +442,6 @@ export const BackLay = styled.div`
     color: var(--mark);
     position: fixed;
     left: -4rem;
-    /* transition: all 0.8s ease; */
     opacity: 1;
     z-index: -1;
     bottom: 0px;
@@ -452,17 +450,6 @@ export const BackLay = styled.div`
 
 export const Main = styled.main`
   &:before {
-    /* background: #1b1b1b;
-    content: '';
-    height: 100vh;
-    width: 100vw;
-    background-image: linear-gradient(currentColor 1px, transparent 1px),
-      linear-gradient(to right, currentColor 1px, transparent 1px);
-    background-size: 109px 96px;
-    color: rgb(224 224 224 / 40%);
-    position: fixed;
-    z-index: -1;
-    background-color: transparent; */
     background: #1b1b1b;
     content: '';
     height: 100vh;
@@ -496,14 +483,4 @@ export const Main = styled.main`
     opacity: 0.1;
     transform: translateZ(0);
   }
-  /* background-image: repeating-linear-gradient(
-    0deg,
-    var(--pattern),
-    var(--pattern) 1px,
-    transparent 1px,
-    transparent
-  );
-  background-attachment: fixed;
-  background-size: 1px 101px;
-  min-height: 100vh; */
 `;
