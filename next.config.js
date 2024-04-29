@@ -10,4 +10,7 @@ module.exports = {
   typescript: {
     tsconfigPath: 'tsconfig.json',
   },
+  compiler: {
+    styledComponents: true,
+  },
 };
