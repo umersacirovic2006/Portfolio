@@ -49,16 +49,10 @@ export default class MyDocument extends Document {
             property="og:description"
             content="Hi, I&#x27;m Umer Sacirovic, Frontend developer, UX architect, and JavaScript engineer."
           />
-          <meta name="twitter:card" content="summary_large_image" />
           <meta name="mobile-web-app-capable" content="yes" />
           <meta
             name="msapplication-config"
             content="/icons/browserconfig.xml"
-          />
-          <meta name="twitter:site" content="@code_wonders" />
-          <meta
-            name="twitter:image"
-            content="https://i.ibb.co/SxxqTRk/Mac-Book-Pro-16-10.png"
           />
           <link
             rel="preload"
@@ -84,7 +78,6 @@ export default class MyDocument extends Document {
           />
           <meta name="next-head-count" content="21" />
           <style
-            // eslint-disable-next-line react/no-danger
             dangerouslySetInnerHTML={{
               __html: `
               

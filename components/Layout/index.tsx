@@ -1,12 +1,7 @@
 /* -------------------------------------------------------------------------- */
 /*                            External Dependecies                            */
 /* -------------------------------------------------------------------------- */
-import React, {
-  PropsWithChildren,
-  useContext,
-  useEffect,
-  useState,
-} from 'react';
+import React, { PropsWithChildren, useContext, useEffect } from 'react';
 import { ScoutBar } from 'scoutbar';
 
 /* -------------------------- Internal Dependencies ------------------------- */
@@ -20,11 +15,12 @@ import { BackLay, BodyStyling, Main } from './style';
 import { actions } from './data';
 import Head from 'next/head';
 
-const Layout: React.FC<PropsWithChildren<{
-  title?: string;
-}>> = ({ children, title = 'Home' }) => {
+const Layout: React.FC<
+  PropsWithChildren<{
+    title?: string;
+  }>
+> = ({ children, title = 'Home' }) => {
   const { theme, loadTheme, show, setTheme } = useContext(AppContext);
-  const [skew, setSkew] = useState(10);
   const logPage = () => {
     if (!(window as any).GA_INITIALIZED) {
       initGA();
@@ -53,7 +49,7 @@ const Layout: React.FC<PropsWithChildren<{
       <Navbar />
       <BackLay title={title}>
         <h1 aria-hidden="true">
-          {title === 'Home' ? 'CW.' : title.concat('.')}
+          {title === 'Home' ? 'US.' : title.concat('.')}
         </h1>
       </BackLay>
       <Cursor />
@@ -63,12 +59,9 @@ const Layout: React.FC<PropsWithChildren<{
   );
 };
 
-export const PageWrapper: React.FC<PropsWithChildren<{}> &
-  React.HTMLAttributes<HTMLDivElement>> = ({
-  children,
-  className = '',
-  ...rest
-}) => {
+export const PageWrapper: React.FC<
+  PropsWithChildren<{}> & React.HTMLAttributes<HTMLDivElement>
+> = ({ children, className = '', ...rest }) => {
   return (
     <section {...rest} id="main-content">
       <div className={`container  ${className}`}>
