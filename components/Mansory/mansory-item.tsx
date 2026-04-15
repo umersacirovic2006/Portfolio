@@ -98,145 +98,79 @@ const MansoryItem: React.FC<MansoryItemProps> = ({ item }) => {
 };
 
 const MansoryItemStyle = styled.div`
-  margin: 0 0 1.5em;
+  margin-bottom: 2rem;
   position: relative;
-
   cursor: pointer;
-  border-radius: 9px;
-  object-fit: cover;
-  background-color: var(--button-index);
-  background-position: center;
-  background-repeat: no-repeat;
+  border-radius: 20px;
+  background: var(--lighter-gray);
+  border: 1px solid var(--border-color);
   overflow: hidden;
-  padding: 1.4rem 2rem;
-  display: flex;
-  align-items: flex-end;
-  border-radius: 9px;
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
   break-inside: avoid;
-
-  @media (max-width: 758px) {
-    padding: 1.4rem 1rem;
-  }
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 
   img {
     width: 100% !important;
     height: 100% !important;
     position: absolute;
-    left: 0 !important;
     top: 0 !important;
+    left: 0 !important;
     object-fit: cover;
+    transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    z-index: 0;
   }
 
-  &:before {
-    content: '';
-    pointer-events: none;
-    display: block;
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    bottom: 0px;
-    left: 0px;
-    z-index: -1;
-    background: radial-gradient(
-      circle at center center,
-      white 10%,
-      whitesmoke 11%,
-      whitesmoke 100%
-    );
+  &:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.3);
+    border-color: var(--cw);
+    
+    img {
+      transform: scale(1.05);
+    }
+
+    .content__slate {
+      background: rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(12px);
+    }
   }
 
-  &:after {
-    content: '';
-    pointer-events: none;
-    position: absolute;
+  .content__slate {
+    position: relative;
     z-index: 1;
-    top: 0px;
-    right: 0px;
-    bottom: 0px;
-    left: 0px;
-    opacity: 0.3;
-    /* background: linear-gradient(
-      191deg,
-      rgba(0, 0, 0, 0.1) 20%,
-      rgba(0, 0, 0, 0.76) 100%
-    ); */
-    background: linear-gradient(
-      180deg,
-      rgba(0, 0, 0, 0.1) 10%,
-      rgb(0 0 0 / 78%) 80%
-    );
-  }
+    padding: 2rem;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, transparent 100%);
+    width: 100%;
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 
-  &:hover,
-  &:focus {
-    cursor: none;
-    &:after {
-      opacity: 1;
-    }
-    div.content__slate {
-      z-index: 999;
-      transform: none;
-      opacity: 1;
-    }
-  }
-
-  h3 {
-    color: #fff;
-    font-size: var(--font-x-md);
-    font-weight: 800;
-  }
-
-  p {
-    color: #d5d5d5 !important;
-    font-size: calc(var(--font-sm) + 0.9px);
-    span {
-      background: #696869;
-      padding: 4px 10px;
-      border-radius: 50px;
-      text-transform: capitalize;
-      font-size: 11px;
-      margin-right: 6px;
+    h3 {
       color: #fff;
-      font-weight: 500;
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      letter-spacing: -0.02em;
     }
-  }
 
-  div.content__slate {
-    opacity: 0;
-    transform: translateY(10%);
-    transition: opacity 300ms ease-in-out 0s, transform 300ms ease-in-out 0s;
-  }
+    p {
+      color: rgba(255, 255, 255, 0.8) !important;
+      font-size: 0.95rem;
+      line-height: 1.5;
+      margin-bottom: 1rem;
 
-  @media (max-width: 585px) {
-    &:after {
-      opacity: 1 !important;
-    }
-    div.content__slate {
-      z-index: 999 !important;
-      transform: none !important;
-      opacity: 1 !important;
-    }
-  }
-
-  @media (max-width: 989px) {
-    &:after {
-      opacity: 1 !important;
-    }
-    div.content__slate {
-      z-index: 999 !important;
-      transform: none !important;
-      opacity: 1 !important;
-    }
-  }
-
-  @media (max-width: 220px) {
-    &:after {
-      opacity: 1 !important;
-    }
-    div.content__slate {
-      z-index: 999 !important;
-      transform: none !important;
-      opacity: 1 !important;
+      span {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(4px);
+        padding: 4px 10px;
+        border-radius: 6px;
+        font-size: 11px;
+        font-weight: 600;
+        color: #fff;
+        text-transform: uppercase;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        margin-right: 6px;
+      }
     }
   }
 `;

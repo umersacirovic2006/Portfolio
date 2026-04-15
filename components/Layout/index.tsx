@@ -64,10 +64,8 @@ export const PageWrapper: React.FC<
 > = ({ children, className = '', ...rest }) => {
   return (
     <section {...rest} id="main-content">
-      <div className={`container  ${className}`}>
-        <div className="row align-items-center justify-content-center">
-          <div className="col-md-10">{children}</div>
-        </div>
+      <div className={`container-fluid ${className}`} style={{ padding: '0 60px' }}>
+        {children}
       </div>
     </section>
   );

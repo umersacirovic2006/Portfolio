@@ -19,17 +19,17 @@ const Navbar = () => {
   return (
     <>
       <Header>
-        <nav className="navbar navbar-expand-lg bg-light navbar-light">
-          <div className="container">
-            <Link
-              href="/"
-              className="navbar-brand"
-              aria-label="Umer Sacirovic Home"
-              tabIndex={show ? -1 : undefined}
-            >
-              <Logo />
-            </Link>
+        <div className="nav-container">
+          <Link
+            href="/"
+            className="navbar-brand-external"
+            aria-label="Umer Sacirovic Home"
+            tabIndex={show ? -1 : undefined}
+          >
+            <Logo />
+          </Link>
 
+          <nav className="navbar navbar-expand-lg">
             <button
               className="navbar-toggler pr-0"
               type="button"
@@ -52,13 +52,12 @@ const Navbar = () => {
                 <Icon />
               </button>
 
-              <ul className="navbar-nav ml-auto">
-                <li className="nav-item hover__bottom d-block d-md-none">
+              <ul className="navbar-nav">
+                <li className="nav-item d-block d-md-none">
                   <Link
                     href="/"
                     activeClassName="is-active"
                     className="nav-link"
-                    id="cardHover"
                     onClick={closeShow}
                     aria-label="Go Home"
                     title="Home"
@@ -66,12 +65,11 @@ const Navbar = () => {
                     Home
                   </Link>
                 </li>
-                <li className="nav-item hover__bottom">
+                <li className="nav-item">
                   <Link
                     href="/about"
                     activeClassName="is-active"
                     className="nav-link"
-                    id="cardHover"
                     onClick={closeShow}
                     aria-label="Go To About Page"
                     title="About"
@@ -79,12 +77,11 @@ const Navbar = () => {
                     About
                   </Link>
                 </li>
-                <li className="nav-item hover__bottom">
+                <li className="nav-item">
                   <Link
                     href="/projects"
                     activeClassName="is-active"
                     className="nav-link"
-                    id="cardHover"
                     onClick={closeShow}
                     aria-label="Go To Projects Page"
                     title="Projects"
@@ -92,12 +89,11 @@ const Navbar = () => {
                     Projects
                   </Link>
                 </li>
-                <li className="nav-item hover__bottom">
+                <li className="nav-item">
                   <Link
                     href="/contact"
                     activeClassName="is-active"
                     className="nav-link"
-                    id="cardHover"
                     onClick={closeShow}
                     aria-label="Go To Contacts Page"
                     title="Contact"
@@ -105,22 +101,19 @@ const Navbar = () => {
                     Contact
                   </Link>
                 </li>
-                <li className="nav-item pl-md-3">
-                  <Link
-                    href="#!"
-                    className="nav-link nav-svg"
-                    aria-label={`Turn On ${
-                      theme === false ? 'Light' : 'Dark'
-                    } Mood`}
-                    onClick={setTheme}
-                  >
-                    <Moon />
-                  </Link>
-                </li>
               </ul>
             </div>
-          </div>
-        </nav>
+          </nav>
+
+          <Link
+            href="#!"
+            className="nav-link-external nav-svg"
+            aria-label={`Turn On ${theme === false ? 'Light' : 'Dark'} Mood`}
+            onClick={setTheme}
+          >
+            <Moon />
+          </Link>
+        </div>
       </Header>
     </>
   );

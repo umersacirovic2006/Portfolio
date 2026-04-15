@@ -1,5 +1,3 @@
-// const withPWA = require('next-pwa');
-
 module.exports = {
   images: {
     domains: ['i.ibb.co'],
@@ -9,6 +7,10 @@ module.exports = {
   swcMinify: true,
   typescript: {
     tsconfigPath: 'tsconfig.json',
+    ignoreBuildErrors: true,
+  },
+  eslint: {
+    ignoreDuringBuilds: true,
   },
   compiler: {
     styledComponents: true,

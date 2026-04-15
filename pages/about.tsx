@@ -14,95 +14,91 @@ import FooterLink from '../components/Footer';
 /* ---------------------------- Image Dependency ---------------------------- */
 import { Github, Product } from '../components/Icons';
 
-const About = () => {
-  return (
-    <Layout title="About Me">
-      <PageSection>
-        <PageWrapper
-          className="mb-5"
-          aria-label="You are now in my educational background section"
-        >
-          <h1 className="intro__text">About Me.</h1> <br />
-          <article>
-            <ul className="timeline">
-              <li className="mt-2">
-                <a
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Open Github Link"
-                  href="https://github.com/umersacirovic2006/"
-                >
-                  Engineering{' '}
-                  <small>
-                    <Github />
-                  </small>
-                </a>
-                <a
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Open Github Link"
-                  id="cardHover"
-                  href="https://github.com/umersacirovic2006/"
-                  className="float-right"
-                >
-                  View Github
-                </a>
-                <p>
-                  The power of first impressions cannot be underestimated, and
-                  the gateway to capitalizing on them lies in exceptional
-                  website design. An outstanding website transcends mere
-                  aesthetics and extends its influence to encompass seamless
-                  functionality and user-friendly navigation. Drawing upon my
-                  expertise as a seasoned programmer, I possess the unique
-                  ability to tackle intricate technical challenges while
-                  crafting websites that exude sleekness and visual allure.
-                  Moreover, my extensive knowledge of recognized technical
-                  standards is complemented by my proficiency in modern building
-                  practices, ensuring that every aspect of your website is
-                  finely tuned to perfection.
-                </p>
-              </li>
-              <li>
-                <Link href="/projects" aria-label="Open Products Page">
-                  Product{' '}
-                  <small>
-                    <Product />
-                  </small>
-                </Link>
-                <Link
-                  href="/projects"
-                  aria-label="Open Products Page"
-                  id="cardHover"
-                  className="float-right"
-                >
-                  View Products
-                </Link>
-                <p>
-                  While I may not fit the conventional mold of a product
-                  manager, my diverse skill set in research, product design, and
-                  product coordination empowers me to drive the growth of a
-                  product from its inception. As an exceptional analytical
-                  thinker, I possess the ability to uphold the product's vision
-                  throughout its entire journey, effectively bridging the
-                  technical and product aspects. By leveraging my expertise, I
-                  can navigate the path from 0 to 1, ensuring the product's
-                  success at every stage.
-                </p>
-              </li>
-            </ul>
-          </article>
-        </PageWrapper>
-      </PageSection>
-
-      <PageWrapper>
-        <FooterLink goto="/projects" className="mt-3 mb-5">
-          Lets Continue To Projects
-        </FooterLink>
-        <br />
+const About = () => (
+  <Layout title="About Me">
+    <PageSection>
+      <PageWrapper
+        className="mb-5"
+        aria-label="You are now in my educational background section"
+      >
+        <h1 className="intro__text">About Me.</h1> <br />
+        <article>
+          <ul className="timeline">
+            <li className="mt-2">
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Open Github Link"
+                href="https://github.com/umersacirovic2006/"
+              >
+                Engineering{' '}
+                <small>
+                  <Github />
+                </small>
+              </a>
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Open Github Link"
+                id="cardHover"
+                href="https://github.com/umersacirovic2006/"
+                className="float-right"
+              >
+                View Github
+              </a>
+              <p>
+                The power of first impressions cannot be underestimated, and the
+                gateway to capitalizing on them lies in exceptional website
+                design. An outstanding website transcends mere aesthetics and
+                extends its influence to encompass seamless functionality and
+                user-friendly navigation. Drawing upon my expertise as a
+                seasoned programmer, I possess the unique ability to tackle
+                intricate technical challenges while crafting websites that
+                exude sleekness and visual allure. Moreover, my extensive
+                knowledge of recognized technical standards is complemented by
+                my proficiency in modern building practices, ensuring that every
+                aspect of your website is finely tuned to perfection.
+              </p>
+            </li>
+            <li>
+              <Link href="/projects" aria-label="Open Products Page">
+                Product{' '}
+                <small>
+                  <Product />
+                </small>
+              </Link>
+              <Link
+                href="/projects"
+                aria-label="Open Products Page"
+                id="cardHover"
+                className="float-right"
+              >
+                View Products
+              </Link>
+              <p>
+                While I may not fit the conventional mold of a product manager,
+                my diverse skill set in research, product design, and product
+                coordination empowers me to drive the growth of a product from
+                its inception. As an exceptional analytical thinker, I possess
+                the ability to uphold the product's vision throughout its entire
+                journey, effectively bridging the technical and product aspects.
+                By leveraging my expertise, I can navigate the path from 0 to 1,
+                ensuring the product's success at every stage.
+              </p>
+            </li>
+          </ul>
+        </article>
       </PageWrapper>
-    </Layout>
-  );
-};
+    </PageSection>
+
+    <PageWrapper>
+      <FooterLink goto="/projects" className="mt-3 mb-5">
+        Lets Continue To Projects
+      </FooterLink>
+      <br />
+    </PageWrapper>
+  </Layout>
+);
 
 const PageSection = styled.div`
   .intro__text {

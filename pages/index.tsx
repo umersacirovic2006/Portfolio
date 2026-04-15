@@ -2,283 +2,442 @@
 /*                            External Dependencies                           */
 /* -------------------------------------------------------------------------- */
 
-import React, { useState } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import Link from 'next/link';
-import { arrayRandomItem } from 'codewonders-helpers';
 import { motion } from 'framer-motion';
 
 /* -------------------------- Internal Dependencies ------------------------- */
 
 import Layout, { PageWrapper } from '../components/Layout';
-import FooterLink from '../components/Footer';
 
-import { getTransitions } from '../components/Utils';
-
-const Home = () => {
-  const [color] = useState(arrayRandomItem(['#37609c', '#34c759', '#5856d6']));
-
-  return (
-    <Layout>
-      <PageSection color={color}>
-        <PageWrapper>
-          <article>
-            <motion.h1
-              data-text="I'm Umer Sacirovic"
-              className="intro__text"
-              {...getTransitions(0.1)}
+const Home = () => (
+  <Layout>
+    <PageSection>
+      <PageWrapper>
+        <div className="hero-container">
+          <article className="hero-content">
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+              className="status-badge"
             >
-              <mark className="mark">I&apos;m Umer Sacirovic</mark>
+              <span className="dot" />
+              Available for new projects
+            </motion.div>
+
+            <motion.h1
+              className="intro__text"
+              initial={{ opacity: 0, x: -30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{
+                duration: 0.8,
+                delay: 0.1,
+                ease: [0.16, 1, 0.3, 1],
+              }}
+            >
+              Umer <br />
+              Sacirovic
             </motion.h1>
-            <motion.p {...getTransitions(0.3)}>
-              {' '}
-              Your friendly neighborhood frontend developer and
-              JavaScript engineer. I spend my days (and often nights) painting
-              the Internet canvas with{' '}
-              <Link href="/projects" aria-label="Go to Projects Page">
-                Projects
-              </Link>{' '}
-              and lines of code, turning zeroes and ones into immersive,
-              interactive experiences.{' '}
-            </motion.p>
-            <motion.p {...getTransitions(0.5)}>
-              You can always{' '}
-              <Link href="/contact" aria-label="Go to Contact Page">
-                Contact Me
+
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{
+                duration: 0.8,
+                delay: 0.3,
+                ease: [0.16, 1, 0.3, 1],
+              }}
+              className="cta-group"
+            >
+              <Link href="/projects" className="cta-button primary">
+                View Projects
               </Link>
-            </motion.p>
+              <Link href="/about" className="cta-button secondary">
+                More About Me
+              </Link>
+            </motion.div>
           </article>
 
-          <br />
-          <motion.div {...getTransitions(0.7)}>
-            <FooterLink goto="/about">See More About Me</FooterLink>
-          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95, x: 20 }}
+            animate={{ opacity: 1, scale: 1, x: 0 }}
+            transition={{ duration: 1, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
+            className="hero-visual"
+          >
+            <div className="terminal-shell">
+              <div className="terminal-header">
+                <div className="dots">
+                  <span className="dot red" />
+                  <span className="dot yellow" />
+                  <span className="dot green" />
+                </div>
+                <div className="terminal-title">zsh — umer@archlinux</div>
+              </div>
+              <div className="terminal-body">
+                <div className="neofetch-container">
+                  <div className="ascii-art">
+                    <pre>
+                      {`
+       /\\
+      /  \\
+     /    \\
+    /      \\
+   /   ,,   \\
+  /   |  |   \\
+ /    -''-    \\
+/              \\
+`}
+                    </pre>
+                  </div>
+                  <div className="system-info">
+                    <div className="user-host">
+                      <span className="user">umer</span>@
+                      <span className="host">arch</span>
+                    </div>
+                    <div className="separator">----------------</div>
+                    <div className="info-line">
+                      <span className="label">OS:</span> Arch Linux
+                    </div>
+                    <div className="info-line">
+                      <span className="label">Kernel:</span> 6.8.5
+                    </div>
+                    <div className="info-line">
+                      <span className="label">WM:</span> Hyprland
+                    </div>
+                    <div className="info-line">
+                      <span className="label">Shell:</span> zsh 5.9
+                    </div>
+                    <div className="info-line">
+                      <span className="label">Stack:</span> Next.js, TS
+                    </div>
 
-          <br />
-        </PageWrapper>
-      </PageSection>
-    </Layout>
-  );
-};
+                    <div className="color-blocks">
+                      <span className="block black" />
+                      <span className="block red" />
+                      <span className="block blue" />
+                      <span className="block white" />
+                    </div>
+                  </div>
+                </div>
+                <div className="terminal-footer">
+                  <div className="command-line">
+                    <span className="prompt">➜</span>{' '}
+                    <span className="path">~</span> <span className="cursor" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </PageWrapper>
+    </PageSection>
+  </Layout>
+);
 
 const PageSection = styled.div`
-  min-height: calc(100vh - 39vh);
+  min-height: 100vh;
+  width: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
-  .intro__text {
-    font-size: 2.275em;
+  padding-top: 100px;
+  padding-bottom: 50px;
+
+  .hero-container {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    width: 100%;
+    min-width: 90vw;
+    min-height: 70vh;
+    gap: 40px;
+
+    @media (max-width: 1100px) {
+      flex-direction: column;
+      text-align: center;
+      justify-content: center;
+      min-height: auto;
+      gap: 80px;
+    }
+  }
+
+  .hero-content {
+    flex: 1;
+    align-self: flex-start;
+    padding-top: 40px;
+    z-index: 2;
+
+    @media (max-width: 1100px) {
+      padding-top: 0;
+    }
+  }
+
+  .hero-visual {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-self: flex-end;
+    z-index: 1;
+
+    @media (max-width: 1100px) {
+      justify-content: center;
+      align-self: center;
+    }
+  }
+
+  .status-badge {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--gray-alpha);
+    border: 1px solid var(--border-color);
+    padding: 6px 14px;
+    border-radius: 100px;
+    width: fit-content;
+    font-size: 13px;
     font-weight: 500;
-    margin: 2rem 0rem 1.5rem;
-    position: relative;
-    text-transform: uppercase;
-    letter-spacing: 9.9px;
+    color: var(--article-color);
+    margin-bottom: 2rem;
 
-    &::before,
-    &::after {
-      content: attr(data-text);
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
+    .dot {
+      width: 8px;
+      height: 8px;
+      background: #34c759;
+      border-radius: 50%;
+      box-shadow: 0 0 10px #34c759aa;
     }
+  }
 
-    &::before {
-      left: 2px;
-      text-shadow: -1px 0 #00ffff;
-      animation: noise-anim-2 15s infinite linear alternate-reverse;
-    }
+  .intro__text {
+    font-size: 5.5rem;
+    line-height: 0.9;
+    font-weight: 800;
+    letter-spacing: -0.05em;
+    margin-bottom: 3.5rem;
+    text-transform: none;
+    color: var(--cw);
 
-    &::after {
-      left: -2px;
-      text-shadow: 3px 0 #ff69b4;
-      animation: noise-anim 2s infinite linear alternate-reverse;
+    @media (max-width: 1200px) {
+      font-size: 4.5rem;
     }
+    @media (max-width: 768px) {
+      font-size: 3.5rem;
+    }
+  }
 
-    @keyframes noise-anim {
-      0% {
-        clip-path: inset(29% 0 25% 0);
+  .cta-group {
+    display: flex;
+    gap: 16px;
+
+    .cta-button {
+      padding: 14px 32px;
+      border-radius: 14px;
+      font-weight: 600;
+      font-size: 15px;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      text-decoration: none;
+
+      &.primary {
+        background: var(--cw);
+        color: var(--bg);
+        &:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 15px 30px -5px rgba(0, 0, 0, 0.3);
+        }
       }
-      5% {
-        clip-path: inset(9% 0 38% 0);
-      }
-      10% {
-        clip-path: inset(96% 0 1% 0);
-      }
-      15% {
-        clip-path: inset(75% 0 23% 0);
-      }
-      20% {
-        clip-path: inset(46% 0 50% 0);
-      }
-      25% {
-        clip-path: inset(3% 0 46% 0);
-      }
-      30% {
-        clip-path: inset(82% 0 2% 0);
-      }
-      35% {
-        clip-path: inset(88% 0 1% 0);
-      }
-      40% {
-        clip-path: inset(91% 0 8% 0);
-      }
-      45% {
-        clip-path: inset(96% 0 2% 0);
-      }
-      50% {
-        clip-path: inset(59% 0 38% 0);
-      }
-      55% {
-        clip-path: inset(41% 0 53% 0);
-      }
-      60% {
-        clip-path: inset(21% 0 47% 0);
-      }
-      65% {
-        clip-path: inset(89% 0 4% 0);
-      }
-      70% {
-        clip-path: inset(1% 0 95% 0);
-      }
-      75% {
-        clip-path: inset(86% 0 4% 0);
-      }
-      80% {
-        clip-path: inset(95% 0 5% 0);
-      }
-      85% {
-        clip-path: inset(54% 0 36% 0);
-      }
-      90% {
-        clip-path: inset(70% 0 27% 0);
-      }
-      95% {
-        clip-path: inset(6% 0 16% 0);
-      }
-      100% {
-        clip-path: inset(95% 0 2% 0);
-      }
-    }
-    @keyframes noise-anim-2 {
-      0% {
-        clip-path: inset(76% 0 21% 0);
-      }
-      5% {
-        clip-path: inset(54% 0 7% 0);
-      }
-      10% {
-        clip-path: inset(55% 0 29% 0);
-      }
-      15% {
-        clip-path: inset(89% 0 3% 0);
-      }
-      20% {
-        clip-path: inset(33% 0 40% 0);
-      }
-      25% {
-        clip-path: inset(17% 0 56% 0);
-      }
-      30% {
-        clip-path: inset(37% 0 51% 0);
-      }
-      35% {
-        clip-path: inset(38% 0 19% 0);
-      }
-      40% {
-        clip-path: inset(93% 0 4% 0);
-      }
-      45% {
-        clip-path: inset(44% 0 14% 0);
-      }
-      50% {
-        clip-path: inset(53% 0 26% 0);
-      }
-      55% {
-        clip-path: inset(67% 0 11% 0);
-      }
-      60% {
-        clip-path: inset(85% 0 13% 0);
-      }
-      65% {
-        clip-path: inset(27% 0 37% 0);
-      }
-      70% {
-        clip-path: inset(87% 0 4% 0);
-      }
-      75% {
-        clip-path: inset(10% 0 8% 0);
-      }
-      80% {
-        clip-path: inset(51% 0 27% 0);
-      }
-      85% {
-        clip-path: inset(10% 0 60% 0);
-      }
-      90% {
-        clip-path: inset(83% 0 3% 0);
-      }
-      95% {
-        clip-path: inset(23% 0 55% 0);
-      }
-      100% {
-        clip-path: inset(1% 0 81% 0);
+
+      &.secondary {
+        background: transparent;
+        border: 1px solid var(--border-color);
+        color: var(--cw);
+        &:hover {
+          background: var(--gray-alpha);
+          transform: translateY(-2px);
+        }
       }
     }
   }
-  p {
-    font-size: calc(var(--font-sm) + 0.9px);
-    line-height: 2.3;
-    font-weight: 400;
-    color: var(--article-color) !important;
 
-    a,button {
-      font-size: calc(var(--font-sm) + 0.9px);
-      line-height: 20px;
-      position: relative;
-      border: none;
-      font-weight: 800;
-      background: transparent;
-      text-transform: uppercase;
-    }
-  }
-  /* button {
-    font-size: var(--font-sm);
-    background: var(--button-index);
-    border: none;
-    border-radius: 5px;
-    transition: all 0.4s ease;
-    padding: 1px 12px;
-    &:hover {
-      background: ${(props) => props.color};
-      color: #fff;
-    }
-  } */
-  @media (max-width: 585px) {
-    margin: 3rem 0;
-    display: block;
-    min-height: 100%;
-  }
-  @media (max-width: 989px) {
-    margin: 3rem 0;
-    display: block;
-  }
-  @media (max-width: 220px) {
-    margin: 3rem 0;
-    display: block;
-    min-height: 100%;
-  }
-  @media (prefers-reduced-motion: reduce) {
-    /* Stop the animation */
+  .terminal-shell {
+    background: var(--gray-alpha);
+    backdrop-filter: blur(20px) saturate(160%);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    width: 100%;
+    max-width: 600px;
+    aspect-ratio: 16 / 10;
+    overflow: hidden;
+    box-shadow: 0 40px 80px -15px rgba(0, 0, 0, 0.3);
+    text-align: left;
+    display: flex;
+    flex-direction: column;
 
-    .intro__text {
-      animation: none;
+    .terminal-header {
+      background: rgba(var(--theme-amount), 0, 0, 0.2);
+      padding: 12px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--border-color);
 
-      &::before,
-      &::after {
-        content: none;
+      .dots {
+        display: flex;
+        gap: 8px;
+        .dot {
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          &.red {
+            background: #ff5f56;
+          }
+          &.yellow {
+            background: #ffbd2e;
+          }
+          &.green {
+            background: #27c93f;
+          }
+        }
       }
+
+      .terminal-title {
+        font-family: 'SF Mono', 'Fira Code', 'JetBrains Mono', monospace;
+        font-size: 11px;
+        color: var(--article-color);
+        font-weight: 500;
+        opacity: 0.7;
+      }
+    }
+
+    .terminal-body {
+      padding: 24px;
+      font-family: 'SF Mono', 'Fira Code', 'JetBrains Mono', monospace;
+      font-size: 14px;
+      color: var(--article-color);
+      line-height: 1.6;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      .neofetch-container {
+        display: flex;
+        gap: 32px;
+        align-items: flex-start;
+        margin-bottom: 20px;
+
+        .ascii-art {
+          color: #3b82f6;
+          height: auto;
+          font-weight: bold;
+
+          pre {
+            margin: 0;
+            line-height: 1.2;
+            overflow: hidden;
+            white-space: pre;
+          }
+        }
+
+        .system-info {
+          .user-host {
+            font-size: 16px;
+            font-weight: 700;
+            .user {
+              color: #3b82f6;
+            }
+            .host {
+              color: #3b82f6;
+            }
+          }
+          .separator {
+            color: var(--article-color);
+            opacity: 0.5;
+            margin: 4px 0;
+          }
+          .info-line {
+            .label {
+              color: #3b82f6;
+              font-weight: 600;
+              margin-right: 8px;
+            }
+          }
+          .color-blocks {
+            display: flex;
+            gap: 0;
+            margin-top: 12px;
+            .block {
+              width: 20px;
+              height: 20px;
+              &.black {
+                background: #000;
+              }
+              &.red {
+                background: #ff5f56;
+              }
+              &.green {
+                background: #27c93f;
+              }
+              &.yellow {
+                background: #ffbd2e;
+              }
+              &.blue {
+                background: #3b82f6;
+              }
+              &.magenta {
+                background: #d33682;
+              }
+              &.cyan {
+                background: #2aa198;
+              }
+              &.white {
+                background: #eee;
+              }
+            }
+          }
+        }
+      }
+
+      .terminal-footer {
+        border-top: 1px solid var(--border-color);
+        padding-top: 12px;
+        margin-top: auto;
+        opacity: 0.8;
+      }
+
+      .command-line {
+        color: var(--cw);
+        font-weight: 600;
+
+        .prompt {
+          color: #27c93f;
+          margin-right: 8px;
+        }
+        .path {
+          color: #3b82f6;
+          margin-right: 8px;
+        }
+
+        .cursor {
+          display: inline-block;
+          width: 8px;
+          height: 18px;
+          background: var(--cw);
+          margin-left: 4px;
+          vertical-align: middle;
+          animation: blink 1s step-end infinite;
+        }
+      }
+    }
+  }
+
+  @keyframes blink {
+    from,
+    to {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
     }
   }
 `;
