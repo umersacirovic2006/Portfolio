@@ -61,14 +61,15 @@ const Layout: React.FC<
 
 export const PageWrapper: React.FC<
   PropsWithChildren<{}> & React.HTMLAttributes<HTMLDivElement>
-> = ({ children, className = '', ...rest }) => {
-  return (
-    <section {...rest} id="main-content">
-      <div className={`container-fluid ${className}`} style={{ padding: '0 60px' }}>
-        {children}
-      </div>
-    </section>
-  );
-};
+> = ({ children, className = '', ...rest }) => (
+  <section {...rest} id="main-content">
+    <div
+      className={`container-fluid ${className}`}
+      style={{ padding: '0 60px' }}
+    >
+      {children}
+    </div>
+  </section>
+);
 
 export default Layout;

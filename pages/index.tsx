@@ -112,6 +112,9 @@ const Home = () => (
                     <div className="info-line">
                       <span className="label">Stack:</span> Next.js, TS
                     </div>
+                    <div className="info-line">
+                      <span className="label">Tech:</span> C, C++, React
+                    </div>
 
                     <div className="color-blocks">
                       <span className="block black" />
@@ -149,9 +152,9 @@ const PageSection = styled.div`
     align-items: stretch;
     justify-content: space-between;
     width: 100%;
-    min-width: 90vw;
+    min-width: 95vw;
     min-height: 70vh;
-    gap: 40px;
+    gap: 20px;
 
     @media (max-width: 1100px) {
       flex-direction: column;
@@ -159,17 +162,21 @@ const PageSection = styled.div`
       justify-content: center;
       min-height: auto;
       gap: 80px;
+      min-width: 100%;
     }
   }
 
   .hero-content {
-    flex: 1;
+    flex: 0 0 45%;
     align-self: flex-start;
     padding-top: 40px;
     z-index: 2;
+    padding-left: 5vw;
 
     @media (max-width: 1100px) {
       padding-top: 0;
+      padding-left: 0;
+      flex: 1;
     }
   }
 
@@ -179,10 +186,12 @@ const PageSection = styled.div`
     justify-content: flex-end;
     align-self: flex-end;
     z-index: 1;
+    padding-right: 2vw;
 
     @media (max-width: 1100px) {
       justify-content: center;
       align-self: center;
+      padding-right: 0;
     }
   }
 

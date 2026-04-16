@@ -1,8 +1,9 @@
 module.exports = {
+  output: 'export',
   images: {
+    unoptimized: true,
     domains: ['i.ibb.co'],
   },
-  distDir: 'dist',
   reactStrictMode: false,
   swcMinify: true,
   typescript: {

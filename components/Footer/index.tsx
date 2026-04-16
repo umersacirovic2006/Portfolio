@@ -27,49 +27,47 @@ const FooterLink: React.FC<IFooterLink &
   children,
   goto,
   ...rest
-}) => {
-  return (
-    <>
-      <FooterStyle>
-        <Link href={`${goto}`}>
-          <p {...rest}>
-            {children}
-            <IconRight />
-          </p>
-        </Link>
-      </FooterStyle>
-      <SocialMedia>
-        <a
-          target="_blank"
-          rel="noopener noreferrer"
-          href="https://www.linkedin.com/in/umer-šaćirović-569698275/"
-          aria-label="Go To Umer Sacirovic Linkedin Page"
-          title="Linkedin Page"
-        >
-          <Linkedin />
-        </a>
-        <a
-          target="_blank"
-          rel="noopener noreferrer"
-          href="https://github.com/umersacirovic2006/"
-          aria-label="Go To Umer Sacirovic Github Page"
-          title="Github Page"
-        >
-          <Github />
-        </a>
-        <a
-          target="_blank"
-          rel="noopener noreferrer"
-          href="https://instagram.com/umersacirovic"
-          aria-label="Go To Umer Sacirovic Instagram Page"
-          title="Instagram Page"
-        >
-          <Instagram />
-        </a>
-      </SocialMedia>
-    </>
-  );
-};
+}) => (
+  <>
+    <FooterStyle>
+      <Link href={`${goto}`}>
+        <p {...rest}>
+          {children}
+          <IconRight />
+        </p>
+      </Link>
+    </FooterStyle>
+    <SocialMedia>
+      <a
+        target="_blank"
+        rel="noopener noreferrer"
+        href="https://www.linkedin.com/in/umer-šaćirović-569698275/"
+        aria-label="Go To Umer Sacirovic Linkedin Page"
+        title="Linkedin Page"
+      >
+        <Linkedin />
+      </a>
+      <a
+        target="_blank"
+        rel="noopener noreferrer"
+        href="https://github.com/umersacirovic2006/"
+        aria-label="Go To Umer Sacirovic Github Page"
+        title="Github Page"
+      >
+        <Github />
+      </a>
+      <a
+        target="_blank"
+        rel="noopener noreferrer"
+        href="https://instagram.com/umersacirovic"
+        aria-label="Go To Umer Sacirovic Instagram Page"
+        title="Instagram Page"
+      >
+        <Instagram />
+      </a>
+    </SocialMedia>
+  </>
+);
 
 const FooterStyle = styled.footer`
   p {

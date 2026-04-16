@@ -7,9 +7,9 @@ import styled from 'styled-components';
 
 /* ------------------------- MansoryLayout PropTypes ------------------------ */
 
-const MansoryLayout: React.FC<PropsWithChildren> = ({ children }) => {
-  return <Layout>{children}</Layout>;
-};
+const MansoryLayout: React.FC<PropsWithChildren> = ({ children }) => (
+  <Layout>{children}</Layout>
+);
 
 const Layout = styled.div`
   margin: 1.5em 0;

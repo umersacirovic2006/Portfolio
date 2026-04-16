@@ -9,19 +9,17 @@ interface ISkipToMain {
   content?: string;
 }
 
-const SkipToMain: React.FC<ISkipToMain> = ({ content = '0' }) => {
-  return (
-    <Wrapper>
-      <a
-        className="skip-main animated fadeIn"
-        href={`#${content}`}
-        aria-label="Skip navigation and go to main content"
-      >
-        Skip to main content
-      </a>
-    </Wrapper>
-  );
-};
+const SkipToMain: React.FC<ISkipToMain> = ({ content = '0' }) => (
+  <Wrapper>
+    <a
+      className="skip-main animated fadeIn"
+      href={`#${content}`}
+      aria-label="Skip navigation and go to main content"
+    >
+      Skip to main content
+    </a>
+  </Wrapper>
+);
 
 const Wrapper = styled.div`
   a.skip-main {
